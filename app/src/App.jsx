@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import "./App.css";
+import peopleImg from "./assets/people.jpg";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <section className="container max-w-2xl mx-auto bg-slate-50 min-h-screen flex items-center justify-center">
+        <div className="card shadow bg-white text-neutral-900 rounded-sm w-full max-w-sm">
+          <div className="grid grid-cols-3 grid-rows-3 p-2 ">
+            <div className="peopleImg">
+              <img src={peopleImg} />
+            </div>
+            <div className="peopleText flex flex-col">
+              <h1 className="">Carla Sanchez</h1>
+              <p>Front End Developer</p>
+              <a target="_blank">carla.sanchez.dev</a>
+            </div>
+            <div className="peopleMedia"></div>
+          </div>
+        </div>
+      </section>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
